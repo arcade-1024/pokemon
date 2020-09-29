@@ -1,0 +1,125 @@
+.poke-card {
+	padding: 5% 0;
+	border-radius: 10px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+	position: relative;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-around;
+	align-items: center;
+	.fa-minus-circle {
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		color: rgba(0, 0, 0, 0.5);
+		visibility: hidden;
+		font-size: 1.2rem;
+		transition: all 0.3s ease;
+	}
+	&:hover > .fa-minus-circle {
+		visibility: visible;
+	}
+	&-img {
+		background-color: rgba(255, 255, 255, 0.4);
+		// padding: 3%;
+		border-radius: 50%;
+
+		&-poke {
+			height: 90px;
+			width: 90px;
+		}
+	}
+	&-info {
+		width: 55%;
+		&-name {
+			text-align: left;
+			text-transform: capitalize;
+			color: #fff;
+			font-size: 1.2rem;
+		}
+		&-type {
+			display: flex;
+			// justify-content: space-around;
+			margin-top: 10px;
+			&-bubble {
+				background-color: rgba(255, 255, 255, 0.678);
+				text-transform: capitalize;
+				color: #888;
+				font-size: 0.8rem;
+				padding: 3px 5px;
+				border-radius: 10px;
+				margin-right: 5px;
+			}
+		}
+		&-data {
+			text-align: left;
+			margin-top: 5px;
+			color: rgba(0, 0, 0, 0.7);
+			margin-bottom: 5px;
+		}
+	}
+	&-grass {
+		background: #48d0b0;
+	}
+	&-water {
+		background: #a5dafe;
+	}
+	&-fire {
+		background: #fd8585;
+	}
+	&-bug {
+		background: #b2ff9e;
+		.poke-card-info-name {
+			color: #000;
+		}
+	}
+	&-normal {
+		background: #fff;
+		.poke-card-info-name {
+			color: #000;
+		}
+		.poke-card-info-type-bubble {
+			background: rgba(0, 0, 0, 0.658);
+			color: #fff;
+		}
+	}
+	&-poison {
+		background: #c77dff;
+	}
+	&-fairy {
+		background: #f4cae0;
+	}
+	&-ground {
+		background: #dda15e;
+	}
+	&-psychic {
+		background: #ffb5a7;
+	}
+	&-fighting {
+		background: #fdfcdc;
+		.poke-card-info-name {
+			color: #000;
+		}
+	}
+	&-rock {
+		background: #979dac;
+	}
+	&-electric {
+		background: #ffd86f;
+	}
+	&-ghost {
+		background: #9b5de5;
+	}
+	&-dragon {
+		background: #9b5de5;
+	}
+	&-ice {
+		background: #ade8f4;
+	}
+	&-dark {
+		background: #6e6968;
+		.poke-card-info-type-bubble {
+			color: #fff;
+		}
+	}
+}
