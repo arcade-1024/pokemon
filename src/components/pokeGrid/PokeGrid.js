@@ -1,10 +1,11 @@
 import React from "react";
 import "./PokeGrid.scss";
 import PokeCard from "../pokeCard/PokeCard";
-
-const PokeGrid = ({ pokeData ,setPokeData}) => {
-	
-	return (
+import Spinner from "../Spinner/Spinner";
+const PokeGrid = ({ isLoading, pokeData, setPokeData }) => {
+	return isLoading ? (
+		<Spinner />
+	) : (
 		<div className="poke-grid">
 			{pokeData.map((item) => (
 				<PokeCard

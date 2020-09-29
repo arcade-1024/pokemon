@@ -10,7 +10,7 @@ import Search from "./components/search/Search";
 function App() {
 	const [pokeData, setPokeData] = useState([]);
 	const [text, setText] = useState("");
-
+	const [isLoading,setIsLoading] = useState(true);
 	let tempArray = [];
 	useEffect(() => {
 		const fetchPokemon = async () => {
@@ -20,6 +20,7 @@ function App() {
 			console.log(tempArray[0]);
 
 			setPokeData(tempArray);
+			setIsLoading(false);
 		};
 
 		const getPokemon = async (id) => {
@@ -46,7 +47,7 @@ function App() {
 			<div className="App-div-egg">
 				<img src={egg} alt="" />
 			</div>
-			<PokeGrid pokeData={pokeData} setPokeData={setPokeData} />
+			<PokeGrid pokeData={pokeData} setPokeData={setPokeData} isLoading={isLoading}/>
 		</div>
 	);
 }
